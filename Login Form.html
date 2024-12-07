@@ -1,0 +1,156 @@
+<!Doctype html>
+<html>
+<head>
+<title>Login</title><link rel="icon" href="https://colorlib.com/etc/lf/Login_v3/images/icons/favicon.ico">
+<style>
+
+body{
+    height: 95vh;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #181B28; 
+}
+.container{
+    background-color: #0F111A;
+    box-shadow: 0px 0px 12px 2px #3B3F51,
+    inset 0px 0px 0px 2px #3B3F51; 
+    border-radius: 06px;
+    padding: 40px;
+    width: 250px;
+}
+h2{
+    text-align: center;
+    color: #CCCCCC;
+    text-shadow: 0px 0px 0px 5px #CCCCCC;
+}
+input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2.5px solid silver;
+  font-size: 15px;
+  color: #B5B5B5;
+  padding-right: 50px;
+  border-radius: 0px; 
+  margin-bottom: 23px;
+  transition: 0.5s;
+}
+input:focus{
+    outline: none;
+    transform: scale(1.08);
+    border-bottom-color:#004aaa;
+    background-color: transparent;
+    transition: 0.5s;
+}
+::placeholder{
+    color: #b5b5b591;
+}
+.login{
+    margin-top:15px;
+}
+.login .btn{
+    border: none;
+    outline: none;
+    color: #fffffd;
+    font-size: 15px;
+    text-shadow: 0px 0px 2px 10px#ffffff;
+    width: 200px;
+    height: 27px;
+    background-color: #348572;
+    border-radius: 3px;
+    margin-top: 13px;
+    margin-left: 27px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.login .btn:hover{
+    background-color: #2db999;
+    transform: scale(1.07);
+    border-radius: 4px;
+    transition: 0.5s;
+}
+.forgot{
+    display: flex;
+    justify-content: space-between;
+}
+.container .forgot label{
+    color: silver;
+    font-size: 14px;
+    font-family:Arial, Helvetica, sans-serif ;
+    margin-top: 0px;
+    cursor: pointer;
+}
+input[type=checkbox] {
+    accent-color: rgba(80, 80, 80, 0);
+}
+.container .forgot a{
+    color: rgb(0, 129, 235);
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    margin-top: 3px;
+}
+.container .account{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .account a{
+    color: rgba(225, 225, 225, 0.678);
+    text-decoration: none;
+}
+.input-box{
+    margin-top: 10px;
+}
+</style>
+<body>
+<div class="container">
+<form action="#">
+<h2>Log in Here<br><br></h2>
+<div class="input-box">
+<div class="email">
+<input pattern='^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$' 
+required type="email" id="email" placeholder="Email" autocomplete="off"
+oninvalid="setCustomValidity('Enter Valid Email')"
+oninput="setCustomValidity('')"/>
+</div>
+<div class="pass">
+<input type="password" id="myInput" placeholder="Password" required autocomplete="off"
+oninvalid="setCustomValidity('Empty Field')"
+oninput="setCustomValidity('')"/>
+</div>
+</div>
+
+<div class="forgot">
+<label id="pass" onclick="myFunction()">Show password</label>
+<a href="#">Forget password?</a>
+</div>
+
+<div class="login">
+<button type="submit" class="btn">Login</button>
+</div>
+
+<div class="account">
+<label><a href="Register Form.html">Don't have a account?</a></label>
+</div>
+
+</form>
+</div>
+<script>
+    function myFunction() {
+      var x = document.getElementById("myInput");
+      if (x.type === "password") {
+        x.type = "text";
+        document.getElementById("pass").innerHTML = "Hide Password";
+      } else {
+        x.type = "password";
+        document.getElementById("pass").innerHTML = "Show Password";
+      }
+    }
+    </script>
+</body>
+</head>
